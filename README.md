@@ -6,14 +6,14 @@ A quick tool to add LDAP data as CRITS Target data. Includes two scripts:
 This script will do the following:
 1. Query LDAP for all users.
 2. For each user, search the CRITS target for the email address of that user.
-  a) If the user exists, update the existing information if necessary.
+  * If the user exists, update the existing information if necessary.
 3. If the user is not found, add the LDAP information for the user as a Target in CRITS.
 
 ## Installation
 1. Copy etc/logging.ini.example to etc/logging.ini
-  a) Edit etc/logging.ini to include a logging path if you wish. By default it logs to ../log/ldap.log.
+  * Edit etc/logging.ini to include a logging path if you wish. By default it logs to ../log/ldap.log.
 2. Copy etc/ldap.ini.example to etc/ldap.ini
-  a) Edit ldap.ini and fill out all the fields with your LDAP information and CRITS mongo information
+  * Edit ldap.ini and fill out all the fields with your LDAP information and CRITS mongo information
 3. Install dependencies
 
 ### Dependencies
