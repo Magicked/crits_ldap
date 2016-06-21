@@ -1,0 +1,18 @@
+[ldap]
+; the LDAP server (probably your domain controller)
+ldap_server = 
+; user account to use for authentication
+ldap_bind_user = CN=AUSERID1234,OU=USA,OU=Users lol,DC=lol
+; enter the LDAP password, or PROMPT to force the system to prompt
+;ldap_bind_password = PROMPT
+ldap_bind_password = lolpassword
+; the base DN for searching
+ldap_base_dn = DC=lol
+
+[crits]
+; CRITS API key - Not used currently
+; key = 
+; CRITS username - Not used. Was for the API.
+; user = lolnate
+; Address of your CRITS *MONGO* instance
+server = <mongo address>
