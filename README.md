@@ -4,6 +4,7 @@ A quick tool to add LDAP data as CRITS Target data. Includes two scripts:
 * ldap_query.py - A quick utility to run an arbitrary ldap query and output the results in JSON. I included this because it was easy to create along with the main project goal of getting LDAP data into CRITS.
 
 This script will do the following:
+
 1. Query LDAP for all users.
 2. For each user, search the CRITS target for the email address of that user.
   1. If the user exists, update the existing information if necessary.
