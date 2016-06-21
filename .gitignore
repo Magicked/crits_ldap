@@ -87,3 +87,11 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Additional things
+*.pyc
+*.swp
+*.swo
+etc/logging.ini
+etc/ldap.ini
+log/
