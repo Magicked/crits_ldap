@@ -49,7 +49,43 @@ python crits_ldap.py
 
 Optionally, you can set up a cron job to run it regularly.
 
+## ldap_query Usage
+ldap_query is a simple command on the analysis server to run a given LDAP query.
+
+```shell
+$ ldap_query -h
+usage: ldap_query.py [-h] QUERY
+
+positional arguments:
+  QUERY       The LDAP query to run. Ex: cn=lolnate, mail=*
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+
+For example, find the user lolnate:
+```shell
+ldap_query "cn=lolnate"
+```
+It also accepts wildcards:
+
+```shell
+ldap_query "mail=*"
+ldap_query "cn=a*"
+```
+
+The result is printed to the screen, so if it is a large result, you may want to write it to a file:
+```shell
+ldap_query "mail=*" > ldap.out
+```
+
+You can also pipe the result to jq for fancy formatting:
+```shell
+ldap_query "cn=lolnate" | jq '.'
+```
+
 ## TODO
 * Ensure this works on any LDAP server or ensure it is configurable.
 * Add email distribution groups as target information
 * Add additional LDAP information in the "notes" section of the Target in CRITS
+
